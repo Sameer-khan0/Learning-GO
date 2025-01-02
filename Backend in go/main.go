@@ -14,7 +14,7 @@ func main() {
 	})
 	r.HandleFunc("/hello/{name}", func(w http.ResponseWriter, r *http.Request) {
 		vars := mux.Vars(r)
-		fmt.Fprintf(w, "Hello, %s!", vars["name"])
+		fmt.Fprintf(w, "Hello, %s! you are great!", vars["name"])
 	})
 	r.HandleFunc("/hello2", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Hello, Go! 2")
